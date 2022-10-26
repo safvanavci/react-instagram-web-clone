@@ -25,31 +25,31 @@ export default function Sidebar() {
             <p className='pl-4'>Ana Sayfa</p>
           </li>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="ara">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
             <SearchIcon/>
             <p className='pl-4'>Ara</p>
           </li>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="kesfet">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
             <ExploreIcon/>
             <p className='pl-4'>Keşfet</p>
           </li>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="mesajlar">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
             <MessageIcon/>
             <p className='pl-4'>Mesajlar</p>
           </li>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="bildirimler">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
             <NotificationsIcon/>
             <p className='pl-4'>Bildirimler</p>
           </li>
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="olustur">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
             <CreateIcon/>
             <p className='pl-4'>Oluştur</p>
