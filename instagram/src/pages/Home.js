@@ -1,7 +1,7 @@
 import React from 'react'
 import Stories from '../components/ Stories'
 import Posts from '../components/Posts'
-import Following from '../components/Following'
+import Rightbar from '../components/Rightbar'
 export default function Home() {
   return (
     <div className='bg-brand w-screen flex justify-center'>
@@ -9,7 +9,7 @@ export default function Home() {
             <Stories/>
             <Posts/>
         </div>
-        <Following/>
+        <Rightbar/>
     </div>
   )
 }
