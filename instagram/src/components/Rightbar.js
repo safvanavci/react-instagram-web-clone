@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
 import Suggestions from './Suggestions'
 export default function Rightbar() {
@@ -6,10 +7,14 @@ export default function Rightbar() {
     <div className='w-[319px] mt-7' >
       <div className='mt-4 mb-2.5 flex items-center'>
         <div className='w-[60px] h-[60px] flex items-center justify-center'>
-          <img src={avatar} className='w-14 h-14 rounded-full' />
+          <NavLink to='/profile'>
+            <img src={avatar} className='w-14 h-14 rounded-full' />
+          </NavLink>
         </div>
         <div className='pl-3 text-sm flex-1' >
-          <p className='font-semibold'>username</p>
+          <NavLink to='/profile'>
+            <p className='font-semibold'>username</p>
+          </NavLink>
           <p className=' text-gray' >User Name</p>
         </div>
         <button className='text-blue text-xs font-semibold'>
