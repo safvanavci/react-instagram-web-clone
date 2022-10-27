@@ -7,6 +7,11 @@ module.exports = {
     colors:{
       'brand': '#fafafa',
       'border': '#dbdbdb',
+      'white': '#fff',
+      'black': '#000',
+      'purple':  '#d312c5',
+      'orange': '#f08863',
+      'yellow': '#f4c505'
     },
     extend: {},
   },

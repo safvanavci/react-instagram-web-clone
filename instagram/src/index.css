@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+.slick-prev:before{ 
+    opacity: 100% !important;
+    color: #ececec;
+}
+.slick-prev{
+    position: absolute;
+    left: 10px;
+    z-index: 20;
+}
+.slick-next:before{
+    opacity: 100% !important;
+    color: #ececec;
+}
+.slick-next{
+    position: absolute;
+    right: 10px;
+    z-index: 20;
+}
+.slick-slide{
+    width: 64px !important;
+    margin-left: 16px;
+}
+.slick-disabled{
+    display: none  !important;
+}
