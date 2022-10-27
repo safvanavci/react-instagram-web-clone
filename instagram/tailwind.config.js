@@ -11,7 +11,8 @@ module.exports = {
       'black': '#000',
       'purple':  '#d312c5',
       'orange': '#f08863',
-      'yellow': '#f4c505'
+      'yellow': '#f4c505',
+      'blue': '#4c96f6'
     },
     extend: {},
   },

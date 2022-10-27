@@ -1,14 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
-import CreateIcon from '../assets/CreateIcon'
-import ExploreIcon from '../assets/ExploreIcon'
-import HomeIcon from '../assets/HomeIcon'
-import InstagramLogo from '../assets/InstagramLogo'
-import MessageIcon from '../assets/MessageIcon'
-import MoreIcon from '../assets/MoreIcon'
-import NotificationsIcon from '../assets/NotificationsIcon'
-import SearchIcon from '../assets/SearchIcon'
+import CreateIcon from './icons/CreateIcon'
+import ExploreIcon from './icons/ExploreIcon'
+import HomeIcon from './icons/HomeIcon'
+import InstagramLogo from './icons/InstagramLogo'
+import MessageIcon from './icons/MessageIcon'
+import MoreIcon from './icons/MoreIcon'
+import NotificationsIcon from './icons/NotificationsIcon'
+import SearchIcon from './icons/SearchIcon'
 
 export default function Sidebar() {
   return (
