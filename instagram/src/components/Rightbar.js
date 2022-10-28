@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
 import Suggestions from './Suggestions'
+
 export default function Rightbar() {
   return (
     <div className='w-[319px] mt-7' >

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
 import CreateIcon from './icons/CreateIcon'
@@ -9,49 +9,63 @@ import MessageIcon from './icons/MessageIcon'
 import MoreIcon from './icons/MoreIcon'
 import NotificationsIcon from './icons/NotificationsIcon'
 import SearchIcon from './icons/SearchIcon'
+import PopupSidebar from './PopupSidebar'
+
+
 
 export default function Sidebar() {
+  const [pop, setPop] = useState('')
+  const showHide = ()=>{
+    if(pop == ''){
+      setPop('!block')
+    }
+    else{
+      setPop('')
+    }
+  }
+
+
   return (
     <div className='w-[400px] h-screen px-3 py-2  border-r border-border sticky top-0'>
-      <div className='py-6 px-3 mb-5'>
+     <div className='py-6 px-3 mb-5'>
         <NavLink to="/">
-          <InstagramLogo/>
+          <InstagramLogo />
         </NavLink>
       </div>
       <ul className='h-inherit'>
         <NavLink to="/">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-           <HomeIcon/>
+            <HomeIcon />
             <p className='pl-4'>Ana Sayfa</p>
           </li>
         </NavLink>
         <NavLink to="ara">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-            <SearchIcon/>
+            <SearchIcon />
             <p className='pl-4'>Ara</p>
           </li>
         </NavLink>
         <NavLink to="kesfet">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-            <ExploreIcon/>
+            <ExploreIcon />
             <p className='pl-4'>Keşfet</p>
           </li>
         </NavLink>
         <NavLink to="mesajlar">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-            <MessageIcon/>
+            <MessageIcon />
             <p className='pl-4'>Mesajlar</p>
           </li>
         </NavLink>
         <NavLink to="bildirimler">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-            <NotificationsIcon/>
+            <NotificationsIcon />
             <p className='pl-4'>Bildirimler</p>
           </li>
         </NavLink>
         <NavLink to="olustur">
           <li className='p-3 my-4 flex items-center rounded-full hover:bg-brand }'>
-            <CreateIcon/>
+            <CreateIcon />
             <p className='pl-4'>Oluştur</p>
           </li>
         </NavLink>
@@ -63,11 +77,15 @@ export default function Sidebar() {
             <p className='pl-4'>Profil</p>
           </li>
         </NavLink>
-        <li className='p-3 mb-6 my-4 flex items-center rounded-full hover:bg-brand absolute  bottom-0 }'>
-          <MoreIcon/>
-          <p className='pl-4'>Daha Fazla</p>
+        <li className=' cursor-pointer p-3 mb-6 my-4 flex items-center rounded-full hover:bg-brand absolute bottom-0 ' onClick={showHide}>
+          <PopupSidebar pop={pop} />
+          <MoreIcon />
+          <p className='pl-4'>
+            Daha Fazla
+          </p>
         </li>
       </ul>
     </div>
   )
+
 }
