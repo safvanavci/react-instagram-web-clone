@@ -5,11 +5,12 @@ import { Route, Routes } from "react-router-dom";
 import ContentPosts from "../components/profile/ContentPosts";
 import ContentSaved from "../components/profile/ContentSaved";
 import ContentTagged from "../components/profile/ContentTagged";
+import Footer from "../components/profile/Footer";
 
 export default function Profile() {
   return (
     <div className='bg-brand w-screen '>
-      <div className='w-[850px] mx-auto'>
+      <div className='w-[930px] mx-auto'>
         <HeaderProfile />
         <StoryProfile />
         <ContentProfile />
@@ -18,6 +19,7 @@ export default function Profile() {
           <Route path='saved' element={<ContentSaved />} />
           <Route path='tagged' element={<ContentTagged />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   )
