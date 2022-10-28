@@ -2,15 +2,19 @@ import NotificationsIcon from '../icons/NotificationsIcon'
 import CommentIcon from '../icons/CommentIcon'
 import SendIcon from '../icons/SendIcon'
 import SaveIcon from '../icons/SaveIcon'
+import { useState } from 'react'
+import PostLike from '../icons/PostLike'
 
 export default function BottomPost() {
+    const [liked, setLiked] = useState(false)
     return (
         <>
             <div className='pl-1 pb-1.5 mt-1 flex justify-between' >
                 <div className='flex' >
-                    <div className='w-10 h-10 p-2' >
-                        <NotificationsIcon />
-                    </div>
+                    <button className='w-10 h-10 p-2' onClick={()=> !liked ? setLiked(true) : setLiked(false)} >
+                       {!liked ? <NotificationsIcon /> : <PostLike/>}  
+                    </button>
+                    {console.log(liked)}
                     <div className='w-10 h-10 p-2' >
                         <CommentIcon />
                     </div>
@@ -24,7 +28,9 @@ export default function BottomPost() {
             </div>
 
             <div className='text-sm font-semibold px-3 '>
-                <span>21</span>
+                <span>
+                    21
+                </span>
                 <span> beğenme</span>
             </div>
 
