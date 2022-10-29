@@ -2,22 +2,18 @@ import NotificationsIcon from '../icons/NotificationsIcon'
 import CommentIcon from '../icons/CommentIcon'
 import SendIcon from '../icons/SendIcon'
 import SaveIcon from '../icons/SaveIcon'
-import { useState } from 'react'
 import PostLike from '../icons/PostLike'
-import Popup from '../Popup'
 
-export default function BottomPost() {
-    const [liked, setLiked] = useState(false);
-    const [popup, setPopup] = useState(false)
 
+export default function PopupBottom({liked, setLiked}) {
     return (
         <>
             <div className='pl-1 pb-1.5 mt-1 flex justify-between' >
                 <div className='flex' >
-                    <button className='w-10 h-10 p-2' onClick={()=> !liked ? setLiked(true) : setLiked(false)} >
-                       {!liked ? <NotificationsIcon /> : <PostLike/>}  
+                    <button className='w-10 h-10 p-2' onClick={() => !liked ? setLiked(true) : setLiked(false)} >
+                        {!liked ? <NotificationsIcon /> : <PostLike />}
                     </button>
-                    <button className='w-10 h-10 p-2' onClick={()=> setPopup(true)} >
+                    <button className='w-10 h-10 p-2'>
                         <CommentIcon />
                     </button>
                     <div className='w-10 h-10 p-2' >
@@ -36,7 +32,7 @@ export default function BottomPost() {
                 <span> beğenme</span>
             </div>
 
-            <div className=' px-3 py-2 flex gap-1'>
+            <div className=' px-3 py-2 flex gap-1 mb-3'>
 
                 <p className='text-sm font-semibold '>
                     username
@@ -45,7 +41,6 @@ export default function BottomPost() {
                     Sokaktan bir görüntü
                 </p>
             </div>
-            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked}/>
         </>
     )
 }
