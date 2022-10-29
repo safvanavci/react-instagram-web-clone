@@ -1,8 +1,8 @@
 import avatar from '../../assets/avatar.jpg'
 
-export default function PopupComments() {
+export default function PopupComments({ comments }) {
   return (
-    <div className='flex'>
+    <div className='flex mb-5'>
       <div className='mr-5'>
         <img src={avatar} className='w-8 h-8 rounded-full' />
       </div>
@@ -10,7 +10,7 @@ export default function PopupComments() {
         <span className=' font-semibold mr-2'>
           username
         </span>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sunt sequi! Dicta sequi possimus, iure minima amet at soluta! Quam!</span>
+        <span>{comments.comm}</span>
       </div>
     </div>
   )
