@@ -5,7 +5,7 @@ import SaveIcon from '../icons/SaveIcon'
 import PostLike from '../icons/PostLike'
 
 
-export default function PopupBottom({liked, setLiked}) {
+export default function PopupBottom({ liked, setLiked, like, username, explanation }) {
     return (
         <>
             <div className='pl-1 pb-1.5 mt-1 flex justify-between' >
@@ -27,7 +27,7 @@ export default function PopupBottom({liked, setLiked}) {
 
             <div className='text-sm font-semibold px-3 '>
                 <span>
-                    21
+                    {!liked ? like : like + 1}
                 </span>
                 <span> beğenme</span>
             </div>
@@ -35,10 +35,10 @@ export default function PopupBottom({liked, setLiked}) {
             <div className=' px-3 py-2 flex gap-1 mb-3'>
 
                 <p className='text-sm font-semibold '>
-                    username
+                    {username}
                 </p>
                 <p className='text-sm'>
-                    Sokaktan bir görüntü
+                    {explanation}
                 </p>
             </div>
         </>

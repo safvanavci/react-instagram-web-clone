@@ -6,7 +6,8 @@ import { useState } from 'react'
 import PostLike from '../icons/PostLike'
 import Popup from '../Popup'
 
-export default function BottomPost() {
+export default function BottomPost({ like, username, explanation, avatar, image }) {
+    
     const [liked, setLiked] = useState(false);
     const [popup, setPopup] = useState(false)
 
@@ -14,10 +15,10 @@ export default function BottomPost() {
         <>
             <div className='pl-1 pb-1.5 mt-1 flex justify-between' >
                 <div className='flex' >
-                    <button className='w-10 h-10 p-2' onClick={()=> !liked ? setLiked(true) : setLiked(false)} >
-                       {!liked ? <NotificationsIcon /> : <PostLike/>}  
+                    <button className='w-10 h-10 p-2' onClick={() => !liked ? setLiked(true) : setLiked(false)} >
+                        {!liked ? <NotificationsIcon /> : <PostLike />}
                     </button>
-                    <button className='w-10 h-10 p-2' onClick={()=> setPopup(true)} >
+                    <button className='w-10 h-10 p-2' onClick={() => setPopup(true)} >
                         <CommentIcon />
                     </button>
                     <div className='w-10 h-10 p-2' >
@@ -31,7 +32,7 @@ export default function BottomPost() {
 
             <div className='text-sm font-semibold px-3 '>
                 <span>
-                    21
+                    {!liked ? like : like+1}
                 </span>
                 <span> beğenme</span>
             </div>
@@ -39,13 +40,13 @@ export default function BottomPost() {
             <div className=' px-3 py-2 flex gap-1'>
 
                 <p className='text-sm font-semibold '>
-                    username
+                    {username}
                 </p>
                 <p className='text-sm'>
-                    Sokaktan bir görüntü
+                    {explanation}
                 </p>
             </div>
-            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked}/>
+            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked} username={username} avatar={avatar} image={image} like={like} explanation={explanation}/>
         </>
     )
 }

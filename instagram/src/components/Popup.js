@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import post from '../assets/post.jpg'
 import HeaderPost from './posts/HeaderPost'
 import CommentPost from './posts/CommentPost'
 import PopupBottom from './popup/PopupBottom'
@@ -7,23 +6,23 @@ import PopupComments from './popup/PopupComments'
 import CrossIcon from './icons/CrossIcon'
 
 
-export default function Popup({ popup, setPopup, liked, setLiked }) {
+export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation }) {
 
     const [list, setList] = useState([])
 
     return (
         <>
             {popup &&
-                <div className='bg-light-black absolute w-screen h-screen top-0 left-0 z-20 flex justify-center items-center'>
+                <div className='fixed w-full h-screen z-40 top-0 left-0 bg-light-black flex justify-center items-center'>
                     <div className='right-4 top-4 absolute cursor-pointer' onClick={() => setPopup(false)} >
                         <CrossIcon />
                     </div>
                     <div className='h-[95%] w-3/4 flex bg-black'>
                         <div className='w-[873px] h-[873px] my-auto'>
-                            <img src={post} />
+                            <img src={image} />
                         </div>
                         <div className=' flex-1 bg-white flex flex-col'>
-                            <HeaderPost />
+                            <HeaderPost username={username} avatar={avatar} />
                             <div className='flex-1 p-4 overflow-scroll'>
                                 {
                                     list.map(comments => (
@@ -33,7 +32,7 @@ export default function Popup({ popup, setPopup, liked, setLiked }) {
                             </div>
                             <div className='border-t border-border'>
 
-                                <PopupBottom liked={liked} setLiked={setLiked} />
+                                <PopupBottom liked={liked} setLiked={setLiked} like={like} username={username} explanation={explanation}/>
 
                                 <CommentPost setList={setList} list={list} />
                             </div>

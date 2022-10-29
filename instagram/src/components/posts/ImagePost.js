@@ -1,9 +1,7 @@
-import post from "../../assets/post.jpg";
-
-export default function ImagePost() {
+export default function ImagePost({image}) {
     return (
         <div>
-            <img src={post} />
+            <img src={image} />
         </div>
     )
 }

@@ -15,10 +15,11 @@ export default function CommentPost({ setList, list }) {
 
             <button className='text-sm font-semibold text-blue disabled:opacity-50' disabled={!comment}
                 onClick={
-                    () =>
+                    () =>{
                         setList([
                             ...list, { comm: comment }
                         ])
+                        setComment('')}
                 }
             >
                 Paylaş
