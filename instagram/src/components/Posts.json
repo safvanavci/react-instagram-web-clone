@@ -1,29 +1,39 @@
 [
-    {
-        "username": "ahmetpolat",
-        "avatar": "https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "post": "https://i.hizliresim.com/sf5dbei.jpg",
-        "likes":20,
-        "explanation":"Gezimden kalan bir görüntü"
-    },
+    
     {
         "username": "bahar",
         "avatar": "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "post": "https://i.hizliresim.com/3ds6hdu.jpg",
+        "post": [
+            {"img":"https://i.hizliresim.com/3ds6hdu.jpg"}
+        ],
         "likes":43,
         "explanation":""
     },
     {
+        "username": "ahmetpolat",
+        "avatar": "https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "post":[
+            {"img":"https://i.hizliresim.com/sf5dbei.jpg"},
+            {"img":"https://i.hizliresim.com/hy8hdqa.jpg"}
+        ],
+        "likes":20,
+        "explanation":"Gezimden kalan bir görüntü"
+    },
+    {
         "username": "ayşen.aksoy",
         "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "post": "https://i.hizliresim.com/nki0wmy.jpg",
+        "post": [
+            {"img":"https://i.hizliresim.com/nki0wmy.jpg"}
+        ],
         "likes":21,
         "explanation":""   
     }, 
     {
         "username": "buraktatkan",
         "avatar": "https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "post": "https://i.hizliresim.com/22pv4zg.jpg",
+        "post": [
+            {"img":"https://i.hizliresim.com/22pv4zg.jpg"}
+        ],
         "likes":60,
         "explanation":"Doğa yürüyüşü"
 

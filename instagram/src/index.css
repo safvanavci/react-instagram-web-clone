@@ -23,7 +23,7 @@
     right: 10px;
     z-index: 20;
 }
-.slick-slide{
+.slide .slick-slide{
     width: 64px !important;
     margin-left: 16px;
 }

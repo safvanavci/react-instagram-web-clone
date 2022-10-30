@@ -4,6 +4,7 @@ import CommentPost from './posts/CommentPost'
 import PopupBottom from './popup/PopupBottom'
 import PopupComments from './popup/PopupComments'
 import CrossIcon from './icons/CrossIcon'
+import ImgPopup from './popup/ImgPopup'
 
 
 export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation }) {
@@ -18,9 +19,9 @@ export default function Popup({ popup, setPopup, liked, setLiked, username, avat
                         <CrossIcon />
                     </div>
                     <div className='h-[95%] w-3/4 flex bg-black'>
-                        <div className='w-[873px] h-[873px] my-auto'>
-                            <img src={image} />
-                        </div>
+
+                        <ImgPopup image={image} />
+
                         <div className=' flex-1 bg-white flex flex-col'>
                             <HeaderPost username={username} avatar={avatar} />
                             <div className='flex-1 p-4 overflow-scroll'>
@@ -32,7 +33,7 @@ export default function Popup({ popup, setPopup, liked, setLiked, username, avat
                             </div>
                             <div className='border-t border-border'>
 
-                                <PopupBottom liked={liked} setLiked={setLiked} like={like} username={username} explanation={explanation}/>
+                                <PopupBottom liked={liked} setLiked={setLiked} like={like} username={username} explanation={explanation} />
 
                                 <CommentPost setList={setList} list={list} />
                             </div>

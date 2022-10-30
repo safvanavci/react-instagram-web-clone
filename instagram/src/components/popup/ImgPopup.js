@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-export default function ImagePost({ image }) {
+export default function ImgPopup({ image }) {
 
     const settings = {
         infinite: false,
@@ -9,13 +9,13 @@ export default function ImagePost({ image }) {
     };
 
     return (
-        <div>
+        <div className='w-[873px] h-[873px] my-auto'>
             {
                 image.length == 1 ?
                     image.map((post, i) =>
                         <img key={i} src={post.img} />
                     ) :
-
+                    
                     <Slider {...settings}>
 
                         {image.map((post, i) =>
