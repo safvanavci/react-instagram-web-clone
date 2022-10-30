@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import HeaderPost from './posts/HeaderPost'
 import CommentPost from './posts/CommentPost'
 import PopupBottom from './popup/PopupBottom'
@@ -7,9 +6,7 @@ import CrossIcon from './icons/CrossIcon'
 import ImgPopup from './popup/ImgPopup'
 
 
-export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation }) {
-
-    const [list, setList] = useState([])
+export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation,list, setList }) {
 
     return (
         <>

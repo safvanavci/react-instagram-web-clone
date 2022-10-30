@@ -6,7 +6,7 @@ import { useState } from 'react'
 import PostLike from '../icons/PostLike'
 import Popup from '../Popup'
 
-export default function BottomPost({ like, username, explanation, avatar, image }) {
+export default function BottomPost({ like, username, explanation, avatar, image, list, setList }) {
     
     const [liked, setLiked] = useState(false);
     const [popup, setPopup] = useState(false)
@@ -46,7 +46,7 @@ export default function BottomPost({ like, username, explanation, avatar, image 
                     {explanation}
                 </p>
             </div>
-            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked} username={username} avatar={avatar} image={image} like={like} explanation={explanation}/>
+            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked} username={username} avatar={avatar} image={image} like={like} explanation={explanation} list={list} setList={setList}/>
         </>
     )
 }
