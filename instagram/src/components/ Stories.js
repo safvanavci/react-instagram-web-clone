@@ -13,7 +13,7 @@ const settings = {
 export default function Stories() {
 
   return (
-    <div className='bg-white py-4  border border-border rounded-lg mt-6 slide'>
+    <div className='bg-white py-4 border border-border rounded-lg lg:mt-6 mt-2 slide'>
 
       <Slider  {...settings} >
         <UsersStory/>

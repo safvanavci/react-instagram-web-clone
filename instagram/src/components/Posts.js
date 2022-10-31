@@ -10,7 +10,7 @@ export default function Posts() {
   const [list, setList] = useState([])
 
   return (
-    <>
+    <div className='mb-16'>
       {
         posts.map(
           (post, i) =>
@@ -23,7 +23,7 @@ export default function Posts() {
         )
       }
 
-    </>
+    </div>
 
   )
 }

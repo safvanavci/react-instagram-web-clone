@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Sidebar from './components/Sidebar';
 import NotFound from './pages/NotFound';
+import Mobile from './components/mobile/Mobile'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='profile/*' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Mobile/>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import TaggedIcon from '../icons/TaggedIcon'
 
 export default function Nav() {
     return (
-        <div className='flex justify-center gap-14 text-gray text-sm  font-semibold'>
+        <div className='flex justify-center lg:gap-14 text-gray text-sm  font-semibold'>
             <NavLink to={'posts'} className={({isActive})=> isActive ? 'border-t border-black text-black' : ''}>
                 <div className='flex items-center py-4'>
                     <PostsIcon />
