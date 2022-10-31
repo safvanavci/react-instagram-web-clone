@@ -9,7 +9,7 @@ export default function ImgPopup({ image }) {
     };
 
     return (
-        <div className='w-[873px] h-[873px] my-auto'>
+        <div className='max-w-[873px]  my-auto mx-auto'>
             {
                 image.length == 1 ?
                     image.map((post, i) =>

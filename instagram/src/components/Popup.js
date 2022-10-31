@@ -4,10 +4,29 @@ import PopupBottom from './popup/PopupBottom'
 import PopupComments from './popup/PopupComments'
 import CrossIcon from './icons/CrossIcon'
 import ImgPopup from './popup/ImgPopup'
+import { useRef,useEffect } from 'react'
 
 
 export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation,list, setList }) {
+    
+    const ref = useRef();
 
+    useOnClickOutside(ref, () => setPopup(false));
+
+    function useOnClickOutside(ref, handler) {
+        useEffect(
+          () => {
+            const listener = (event) => {
+              if (!ref.current || ref.current.contains(event.target)) {
+                return;
+              }handler(event);
+            };
+            document.addEventListener("mousedown", listener);
+            document.addEventListener("touchstart", listener);
+          },[ref,handler]
+        );
+      }
+      
     return (
         <>
             {popup &&
@@ -15,13 +34,13 @@ export default function Popup({ popup, setPopup, liked, setLiked, username, avat
                     <div className='right-4 top-4 absolute cursor-pointer' onClick={() => setPopup(false)} >
                         <CrossIcon />
                     </div>
-                    <div className='h-[95%] w-3/4 flex bg-black'>
+                    <div ref={ref} className='lg:h-[95%] w-3/4 lg:flex bg-black'>
 
                         <ImgPopup image={image} />
 
-                        <div className=' flex-1 bg-white flex flex-col'>
+                        <div className=' hidden bg-white lg:flex  flex-col'>
                             <HeaderPost username={username} avatar={avatar} />
-                            <div className='flex-1 p-4 overflow-scroll'>
+                            <div className='flex-1 w-[350px] p-4 overflow-scroll break-all'>
                                 {
                                     list.map(comments => (
                                         <PopupComments comments={comments} />

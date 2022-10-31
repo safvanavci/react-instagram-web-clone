@@ -26,7 +26,7 @@ export default function Sidebar() {
 
 
   return (
-    <div className='w-[400px] h-screen px-3 py-2  border-r border-border sticky top-0'>
+    <div className='hidden lg:block w-[400px] h-screen px-3 py-2  border-r border-border sticky top-0'>
      <div className='py-6 px-3 mb-5'>
         <NavLink to="/">
           <InstagramLogo />

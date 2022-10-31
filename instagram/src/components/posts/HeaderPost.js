@@ -8,7 +8,7 @@ export default function HeaderPost({ avatar, username }) {
       <NavLink to='/profile'>
         <div className='flex items-center my-2 ml-3 mr-1  w-full flex-1'>
           <div className='rounded-full overflow-hidden'>
-            <img className='w-8 h-8' src={avatar} />
+            <img className='w-8 h-8 object-cover' src={avatar} />
           </div>
           <div className='text-sm font-semibold ml-2.5'>
             {username}

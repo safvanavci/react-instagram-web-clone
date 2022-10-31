@@ -5,7 +5,7 @@ import Suggestions from './Suggestions'
 
 export default function Rightbar() {
   return (
-    <div className='w-[319px] mt-7' >
+    <div className='hidden lg:block w-[319px] mt-7' >
       <div className='mt-4 mb-2.5 flex items-center'>
         <div className='w-[60px] h-[60px] flex items-center justify-center'>
           <NavLink to='/profile'>
