@@ -9,11 +9,11 @@ export default function ImgPopup({ image }) {
     };
 
     return (
-        <div className='max-w-[873px]  my-auto mx-auto'>
+        <div className='max-w-[873px] h-full  my-auto mx-auto'>
             {
                 image.length == 1 ?
                     image.map((post, i) =>
-                        <img key={i} src={post.img} />
+                        <img key={i} src={post.img} className='h-full' />
                     ) :
                     
                     <Slider {...settings}>

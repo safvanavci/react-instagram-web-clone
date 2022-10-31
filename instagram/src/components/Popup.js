@@ -12,7 +12,7 @@ export default function Popup({ popup, setPopup, liked, setLiked, username, avat
     const ref = useRef();
 
     useOnClickOutside(ref, () => setPopup(false));
-
+    
     function useOnClickOutside(ref, handler) {
         useEffect(
           () => {
