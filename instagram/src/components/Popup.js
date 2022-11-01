@@ -5,10 +5,12 @@ import PopupComments from './popup/PopupComments'
 import CrossIcon from './icons/CrossIcon'
 import ImgPopup from './popup/ImgPopup'
 import { useRef,useEffect } from 'react'
+import {MainContext, useContext} from '../context/Context'
 
 
-export default function Popup({ popup, setPopup, liked, setLiked, username, avatar, image, like, explanation,list, setList }) {
+export default function Popup({ username, avatar, image, like, explanation }) {
     
+    const {popup, setPopup, list} = useContext(MainContext)
     const ref = useRef();
 
     useOnClickOutside(ref, () => setPopup(false));
@@ -49,9 +51,9 @@ export default function Popup({ popup, setPopup, liked, setLiked, username, avat
                             </div>
                             <div className='border-t border-border'>
 
-                                <PopupBottom liked={liked} setLiked={setLiked} like={like} username={username} explanation={explanation} />
+                                <PopupBottom like={like} username={username} explanation={explanation} />
 
-                                <CommentPost setList={setList} list={list} />
+                                <CommentPost />
                             </div>
                         </div>
                     </div>

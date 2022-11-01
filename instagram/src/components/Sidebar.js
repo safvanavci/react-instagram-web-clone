@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
 import CreateIcon from './icons/CreateIcon'
@@ -10,11 +9,14 @@ import MoreIcon from './icons/MoreIcon'
 import NotificationsIcon from './icons/NotificationsIcon'
 import SearchIcon from './icons/SearchIcon'
 import PopupSidebar from './PopupSidebar'
+import {MainContext, useContext} from '../context/Context'
 
 
 
 export default function Sidebar() {
-  const [pop, setPop] = useState('')
+
+  const {pop, setPop} = useContext(MainContext)
+
   const showHide = ()=>{
     if(pop == ''){
       setPop('!block')
@@ -78,7 +80,7 @@ export default function Sidebar() {
           </li>
         </NavLink>
         <li className=' cursor-pointer p-3 mb-6 my-4 flex items-center rounded-full hover:bg-brand absolute bottom-0 ' onClick={showHide}>
-          <PopupSidebar pop={pop} />
+          <PopupSidebar />
           <MoreIcon />
           <p className='pl-4'>
             Daha Fazla

@@ -1,8 +1,10 @@
 import avatar from '../assets/avatar.jpg'
-import { useState } from 'react'
+import {MainContext, useContext} from '../context/Context'
 
 export default function Suggestions() {
-    const [follow, setfollow] = useState(true)
+
+    const {setfollow, follow } = useContext(MainContext)
+
     return (
         <div className='flex py-1.5 pl-1 items-center' >
             <img src={avatar} className='w-8 h-8 rounded-full' />

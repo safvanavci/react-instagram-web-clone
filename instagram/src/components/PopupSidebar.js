@@ -1,6 +1,9 @@
-import React from 'react'
+import {MainContext, useContext} from '../context/Context'
 
-export default function PopupSidebar({pop}) {
+export default function PopupSidebar() {
+
+    const {pop} = useContext(MainContext)
+
     return (
         <div className={ ` ${pop} hidden w-56 absolute bottom-14  left-1 rounded-md overflow-hidden bg-[#efefef] shadow-lg` }>
             <div className=' py-2 px-4 bg-white hover:bg-brand'>

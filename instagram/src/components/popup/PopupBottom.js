@@ -2,10 +2,14 @@ import NotificationsIcon from '../icons/NotificationsIcon'
 import CommentIcon from '../icons/CommentIcon'
 import SendIcon from '../icons/SendIcon'
 import SaveIcon from '../icons/SaveIcon'
+import {MainContext, useContext} from '../../context/Context'
 import PostLike from '../icons/PostLike'
 
 
-export default function PopupBottom({ liked, setLiked, like, username, explanation }) {
+export default function PopupBottom({ like, username, explanation }) {
+
+    const {liked, setLiked} = useContext(MainContext)
+
     return (
         <>
             <div className='pl-1 pb-1.5 mt-1 flex justify-between' >

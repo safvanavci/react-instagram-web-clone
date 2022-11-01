@@ -1,9 +1,9 @@
-import { useState } from "react";
 import EmoteIcon from '../icons/EmoteIcon'
+import {MainContext, useContext} from '../../context/Context'
 
-export default function CommentPost({ setList, list }) {
+export default function CommentPost() {
 
-    const [comment, setComment] = useState('')
+    const { setList, list, comment, setComment } = useContext(MainContext)
 
     return (
         <div className='px-3 py-1 border-t border-border flex items-center'>

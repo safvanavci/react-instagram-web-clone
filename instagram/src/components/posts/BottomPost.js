@@ -2,14 +2,14 @@ import NotificationsIcon from '../icons/NotificationsIcon'
 import CommentIcon from '../icons/CommentIcon'
 import SendIcon from '../icons/SendIcon'
 import SaveIcon from '../icons/SaveIcon'
-import { useState } from 'react'
 import PostLike from '../icons/PostLike'
 import Popup from '../Popup'
+import {MainContext, useContext} from '../../context/Context'
 
-export default function BottomPost({ like, username, explanation, avatar, image, list, setList }) {
+
+export default function BottomPost({ like, username, explanation, avatar, image }) {
     
-    const [liked, setLiked] = useState(false);
-    const [popup, setPopup] = useState(false)
+    const { liked, setLiked, setPopup} = useContext(MainContext)
 
     return (
         <>
@@ -46,7 +46,7 @@ export default function BottomPost({ like, username, explanation, avatar, image,
                     {explanation}
                 </p>
             </div>
-            <Popup popup={popup} setPopup={setPopup} liked={liked} setLiked={setLiked} username={username} avatar={avatar} image={image} like={like} explanation={explanation} list={list} setList={setList}/>
+            <Popup username={username} avatar={avatar} image={image} like={like} explanation={explanation}  />
         </>
     )
 }
