@@ -2,13 +2,9 @@
 
 Instagramı birde benden görün :) React ile yaptığım arayüz çalışması.Uygulamada yorum yapma, beğenme, takip gibi özellikler bulunmakta.Tavsiyelerine açığım düzeltmem veya eklemem gereken şeyleri bana [iletebilirsin.](https://twitter.com/safvanavci)
 
-Context yapısına bu [buradan](https://github.com/safvanavci/react-instagram-web-clone/tree/context) ulaşabilirsin.
+Context yapısına [buradan](https://github.com/safvanavci/react-instagram-web-clone/tree/context) ulaşabilirsin.
 
-## Yapılacaklar
 
-Proje context yapısıyla düzenlenilecek.
-
-Responsive sorunları giderilecek.
 
 ## Demo
 
